@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import '../assets/styles/header.css'
-import useModal from '../hooks/useModal'
+import '../assets/styles/header.css';
+import '../assets/styles/buttonAnimation.css';
+import useModal from '../hooks/useModal';
 
 const Form = ({ getData, selectedUser, unSelectUser }) => {
     const { handleSubmit, register, reset } = useForm()
@@ -60,7 +61,9 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
                 <div className={`modal-form ${isOpen ? 'modalOn' : null}`} >
                     <div className='create-container'>
                         <h1>{selectedUser ? 'Edit user' : 'New user'}</h1>
-                        <button type='button' className='btn close' onClick={closeButtonFunction}><i className="fa-solid fa-x fa-xs"></i></button>
+                        <button type='button' className='btn close' onClick={closeButtonFunction}>
+                            <i className="fa-solid fa-x fa-xs"></i>
+                        </button>
                         <div className='feature'>
                             <label htmlFor="name">Name</label>
                             <input {...register('first_name')} type="text" id="name" />
