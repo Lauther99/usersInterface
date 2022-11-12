@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/listUsers.css'
 
-const Users = ({ data, selectUser }) => {
+const Users = ({ data, selectUser, deleteUser}) => {
     return (
         <ul className='user-container'>
             {
@@ -15,12 +15,12 @@ const Users = ({ data, selectUser }) => {
                             <h4>{user.birthday}</h4>
                         </div>
                         <div className='card-back'>
-                            <button type='button' className='trash'>
+                            <div className='trash' onClick={() => deleteUser(user.id)}>
                                 <i className="fa-solid fa-trash fa-2xl"></i>
-                            </button>
-                            <button type='button' className='edit' onClick={() => selectUser(user)}>
+                            </div>
+                            <div className='edit' onClick={() => selectUser(user)}>
                                 <i className="fa-solid fa-pencil fa-2xl"></i>
-                            </button>
+                            </div>
                         </div>
                     </li>
                 ))

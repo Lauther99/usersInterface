@@ -1,0 +1,19 @@
+.unfilled{
+    width: 100%;
+    height: calc(100vh - 2rem - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.unfilled img{
+    width: 100%;
+    max-width: 600px;
+}
+.unfilled h1{
+    text-align: center;
+    color: #fff;
+}
