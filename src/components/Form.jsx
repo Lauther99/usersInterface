@@ -37,8 +37,8 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
             axios.put(`https://users-crud1.herokuapp.com/users/${selectedUser.id}/`, data)
                 .then(() => {
                     getData(),
-                    unSelectUser(),
-                    closeModal()
+                        unSelectUser(),
+                        closeModal()
                 })
         } else {
             axios.post('https://users-crud1.herokuapp.com/users/', data)
@@ -59,7 +59,7 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
             <form className='users-form' onSubmit={handleSubmit(submit)}>
                 <div className={`modal-form ${isOpen ? 'modalOn' : null}`} >
                     <div className='create-container'>
-                        <h1>{selectedUser? 'Edit user' : 'New user'}</h1>
+                        <h1>{selectedUser ? 'Edit user' : 'New user'}</h1>
                         <button type='button' className='btn close' onClick={closeButtonFunction}><i className="fa-solid fa-x fa-xs"></i></button>
                         <div className='feature'>
                             <label htmlFor="name">Name</label>
@@ -81,7 +81,7 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
                             <label htmlFor="birthday">Birthday</label>
                             <input {...register('birthday')} type="date" id="birthday" />
                         </div>
-                        <button className='btn add'>{selectedUser? 'Save changes' : 'Create a user'}</button>
+                        <button className='btn add'>{selectedUser ? 'Save changes' : 'Create a user'}</button>
                     </div>
                 </div>
             </form>
