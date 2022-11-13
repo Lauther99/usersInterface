@@ -1,18 +1,23 @@
 import React from 'react';
 import '../assets/styles/listUsers.css'
 
-const Users = ({ data, selectUser, deleteUser}) => {
+const Users = ({ data, selectUser, deleteUser }) => {
     return (
         <ul className='user-container'>
             {
                 data.map(user => (
                     <li key={user.id} className='card'>
-                        <div className='card-front'>
-                            <h2>{`${user.first_name} ${user.last_name}`}</h2>
-                            <h3>e-mail</h3>
-                            <h4>{user.email}</h4>
-                            <h3>Birthday</h3>
-                            <h4>{user.birthday}</h4>
+                        <div className="container-card">
+                            <div className="container-box">
+                                <span></span>
+                                <div className='card-front'>
+                                    <h2>{`${user.first_name} ${user.last_name}`}</h2>
+                                    <h3>E-mail</h3>
+                                    <h4>{user.email}</h4>
+                                    <h3>Birthday</h3>
+                                    <h4>{user.birthday}</h4>
+                                </div>
+                            </div>
                         </div>
                         <div className='card-back'>
                             <div className='trash' onClick={() => deleteUser(user.id)}>
