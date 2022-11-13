@@ -13,9 +13,9 @@ const Users = ({ data, selectUser, deleteUser }) => {
                                 <div className='card-front'>
                                     <h2>{`${user.first_name} ${user.last_name}`}</h2>
                                     <h3>E-mail</h3>
-                                    <h4>{user.email}</h4>
+                                    <h4 className='user-email'>{user.email}</h4>
                                     <h3>Birthday</h3>
-                                    <h4>{user.birthday}</h4>
+                                    <h4 className='user-birthday'>{user.birthday}</h4>
                                 </div>
                             </div>
                         </div>

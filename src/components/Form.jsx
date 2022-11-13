@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import '../assets/styles/header.css';
 import '../assets/styles/buttonAnimation.css';
 import useModal from '../hooks/useModal';
+import anonymous from '../assets/images/proyect-reac-crud.png'
 
 const Form = ({ getData, selectedUser, unSelectUser }) => {
     const { handleSubmit, register, reset } = useForm()
@@ -51,8 +52,8 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
             axios.post('https://users-crud1.herokuapp.com/users/', data)
                 .then(() => {
                     getData(),
-                    reset(initialValues),
-                    closeModal();
+                        reset(initialValues),
+                        closeModal();
                     unSelectUser();
                     setIsError(null);
                 }
@@ -75,10 +76,13 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
 
     return (
         <div>
-            <button className='btn create' onClick={openModal}>
-                <i className="fa-solid fa-plus fa-xl"></i>
-                Create new user
-            </button>
+            <div className="container-btn-create">
+                <img className="img-anonymous" src={anonymous} alt="" />
+                <button className='btn create' onClick={openModal}>
+                    <i className="fa-solid fa-plus fa-xl"></i>
+                    Create new user
+                </button>
+            </div>
             <form className='users-form' onSubmit={handleSubmit(submit)}>
                 <div className={`modal-form ${setModalState()}`} >
                     <div className='create-container'>
@@ -106,7 +110,7 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
                             <label htmlFor="birthday" >Birthday*</label>
                             <input {...register('birthday')} type="date" id="birthday" />
                         </div>
-                        <div className='error-alert' style={isError? {display: 'flex'} : null}>
+                        <div className='error-alert' style={isError ? { display: 'flex' } : null}>
                             <p>Debe llenar los campos con *</p>
                         </div>
                         <button className='btn add'>
