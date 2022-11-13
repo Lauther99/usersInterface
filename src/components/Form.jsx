@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import '../assets/styles/header.css';
 import '../assets/styles/buttonAnimation.css';
 import useModal from '../hooks/useModal';
-import anonymous from '../assets/images/proyect-reac-crud.png'
+import anonymous from '../assets/images/proyect-reac-crud.avif'
 
 const Form = ({ getData, selectedUser, unSelectUser }) => {
     const { handleSubmit, register, reset } = useForm()
