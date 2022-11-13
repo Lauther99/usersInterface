@@ -9,10 +9,11 @@
 .create {
     width: 230px;
     height: 60px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
-    text-shadow: 1px 1px rgb(4, 46, 122);
+    font-family: 'Aldrich', sans-serif;
+    text-shadow: 1px 1px rgb(0, 0, 0);
     color: #fff;
     /* background: linear-gradient(90deg, rgb(0, 85, 110) 0%, rgb(29, 243, 222) 100%); */
     background: linear-gradient(90deg, #ffbc00 0%, #ff0058 100%);

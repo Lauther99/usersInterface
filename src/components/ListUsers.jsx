@@ -17,16 +17,17 @@ const Users = ({ data, selectUser, deleteUser }) => {
                                     <h3>Birthday</h3>
                                     <h4 className='user-birthday'>{user.birthday}</h4>
                                 </div>
+                                <div className='card-back'>
+                                    <div className='trash' onClick={() => deleteUser(user.id)}>
+                                        <i className="fa-solid fa-trash fa-2xl"></i>
+                                    </div>
+                                    <div className='edit' onClick={() => selectUser(user)}>
+                                        <i className="fa-solid fa-pencil fa-2xl"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className='card-back'>
-                            <div className='trash' onClick={() => deleteUser(user.id)}>
-                                <i className="fa-solid fa-trash fa-2xl"></i>
-                            </div>
-                            <div className='edit' onClick={() => selectUser(user)}>
-                                <i className="fa-solid fa-pencil fa-2xl"></i>
-                            </div>
-                        </div>
+
                     </li>
                 ))
             }
