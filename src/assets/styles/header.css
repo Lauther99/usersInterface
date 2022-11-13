@@ -67,7 +67,8 @@
 }
 
 .create-container h1 {
-    color:rgb(4, 46, 122);
+    /* color:rgb(4, 46, 122); */
+    color: rgba(0, 0, 0, 0.9);
     font-size: 20px;
 }
 
@@ -89,7 +90,8 @@
 .add {
     margin-top: 1rem;
     width: 100%;
-    background-color: rgb(4, 46, 122);
+    /* background-color: rgb(4, 46, 122); */
+    background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
 }
 

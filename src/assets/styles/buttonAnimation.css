@@ -13,7 +13,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-family: 'Aldrich', sans-serif;
-    text-shadow: 1px 1px rgb(0, 0, 0);
+    /* text-shadow: 1px 1px rgb(0, 0, 0); */
     color: #fff;
     /* background: linear-gradient(90deg, rgb(0, 85, 110) 0%, rgb(29, 243, 222) 100%); */
     background: linear-gradient(90deg, #ffbc00 0%, #ff0058 100%);
@@ -26,6 +26,12 @@
     top: -40px;
     left: 60px;
     z-index: 50;
+}
+
+.create-container{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 10px solid rgba(0, 0, 0, 0.9);
 }
 
 
@@ -81,3 +87,138 @@
         opacity: 0;
     }
 }
+
+/* --------------- INICIO CODE BTN INPUT ELASTIC ---------------*/ /*BY IMMER*/
+
+.input-elastic{
+    
+    text-align: start;
+    position: relative;
+    /* margin-bottom: -180px; */
+    
+}
+
+.inp {
+  position: relative;
+  padding-top: 15px;
+}
+
+.inp .label {
+  position: absolute;
+  height: fit-content;
+  top: 12px; /*Para mover el Label Gris Interno*/
+  left: 0px; 
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+
+.inp svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 26px;
+  fill: none;
+}
+
+.inp svg path {
+  stroke: #c8ccd4;
+  stroke-width: 2;
+}
+
+.inp svg path d {
+  transition: all 0.2s ease;
+}
+
+.inp .border {
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  height: 2px;
+  right: 0;
+  background: #c8ccd4;
+}
+
+.inp input {
+  /* -webkit-appearance: none; */
+  border: 0;
+  font-family: inherit;
+  margin: 25px 0px;
+  font-size: 16px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+  padding: 0; /*Cursor parpadeante*/
+}
+
+.inp input:not(:placeholder-shown) + span {
+  color: #5a667f;
+  transform: translateY(-20px) scale(0.75); /*Controlar la distancia del label pequeño*/
+}
+
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+
+.inp input:focus + span {
+  color: #07f;
+  transform: translateY(-20px) scale(0.75); /*Controlar la distancia del label pequeño*/
+  transition-delay: 0.1s;
+}
+
+.inp input:focus + span + svg path {
+  stroke: #07f;
+  animation: elasticInput 0.4s ease forwards;
+}
+
+.inp input:focus + span + svg + .border {
+  background: #07f;
+}
+
+.dribbble {
+  position: fixed;
+  right: 20px;
+  bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.dribbble span {
+  font-size: 28px;
+  color: #9098a9;
+}
+
+@-moz-keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+
+@-webkit-keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+
+@-o-keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+
+@keyframes elasticInput {
+  50% {
+    d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
+  }
+}
+
+.label-birthady{
+    /* color: #9098a9; */
+    color: #000000;
+}
+
+/* --------------- FIN CODE BTN INPUT ELASTIC ---------------*/ /*BY IMMER*/

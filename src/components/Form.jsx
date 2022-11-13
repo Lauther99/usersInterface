@@ -80,41 +80,63 @@ const Form = ({ getData, selectedUser, unSelectUser }) => {
                 <img className="img-anonymous" src={anonymous} alt="" />
                 <button className='btn create' onClick={openModal}>
                     <i className="fa-solid fa-plus fa-xl"></i>
-                    Create new user
+                    CREATE A NEW USER
                 </button>
             </div>
             <form className='users-form' onSubmit={handleSubmit(submit)}>
                 <div className={`modal-form ${setModalState()}`} >
                     <div className='create-container'>
-                        <h1>{selectedUser ? 'Edit user' : 'New user'}</h1>
+                        <h1>{selectedUser ? 'EDIT USER' : 'NEW USER'}</h1>
                         <button type='button' className='btn close' onClick={closeButtonFunction}>
                             <i className="fa-solid fa-x fa-xs"></i>
                         </button>
                         <div className='feature'>
-                            <label htmlFor="name">Name*</label>
-                            <input {...register('first_name')} type="text" id="name" />
+                        {/* ---------- INICIO CODIGO INPUT - BY IMMER ---------- */}
+                            <div className='input-elastic'>
+                                <label for="name" class="inp">
+                                    <input {...register('first_name')} type="text" id="name" placeholder="&nbsp;" />
+                                    <span class="label">Name *</span>
+                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                                    </svg>
+                                    <span class="border"></span>
+                                </label>
+                                <label for="lastName" class="inp">
+                                    <input {...register('last_name')} type="text" id="lastName" placeholder="&nbsp;" />
+                                    <span class="label">Last Name *</span>
+                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                                    </svg>
+                                    <span class="border"></span>
+                                </label>
+                                <label for="email" class="inp">
+                                    <input {...register('email')} type="email" id="email" placeholder="&nbsp;" />
+                                    <span class="label">E-mail *</span>
+                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                                    </svg>
+                                    <span class="border"></span>
+                                </label>
+                                <label for="password" class="inp">
+                                    <input {...register('password')} type="password" id="password" placeholder="&nbsp;" />
+                                    <span class="label">Password *</span>
+                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                                    </svg>
+                                    <span class="border"></span>
+                                </label>
+                            </div>
+                        {/* ---------- FIN CODIGO INPUT - BY IMMER ---------- */}
                         </div>
                         <div className='feature'>
-                            <label htmlFor="lastName">Last Name*</label>
-                            <input {...register('last_name')} type="text" id="lastName" />
-                        </div>
-                        <div className='feature'>
-                            <label htmlFor="email">e-mail*</label>
-                            <input {...register('email')} type="email" id="email" />
-                        </div>
-                        <div className='feature'>
-                            <label htmlFor="password">Password*</label>
-                            <input {...register('password')} type="password" id="password" />
-                        </div>
-                        <div className='feature'>
-                            <label htmlFor="birthday" >Birthday*</label>
+                            <label htmlFor="birthday" className='label-birthady'>Birthday *</label>
                             <input {...register('birthday')} type="date" id="birthday" />
                         </div>
                         <div className='error-alert' style={isError ? { display: 'flex' } : null}>
                             <p>Debe llenar los campos con *</p>
                         </div>
                         <button className='btn add'>
-                            {selectedUser ? 'Save changes' : 'Create a user'}
+                            {selectedUser ? 'SAVE CHANGES' : 'CREATE A USER'}
                         </button>
                     </div>
                 </div>
