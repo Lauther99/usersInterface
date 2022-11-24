@@ -1,6 +1,5 @@
 .unfilled{
     width: 100%;
-    height: calc(100vh - 2rem - 100px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

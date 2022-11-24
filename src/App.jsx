@@ -38,8 +38,10 @@ function App() {
 
   return (
     <>
-      <Header getData={getData} selectedUser={selectedUser} unSelectUser={unSelectUser} />
-      {showList()}
+      <div className='app-container'>
+        <Header getData={getData} selectedUser={selectedUser} unSelectUser={unSelectUser} />
+        {showList()}
+      </div>
 
 
     </>
